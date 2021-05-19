@@ -6,6 +6,9 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="site-hero-content text-center">
+            {{ if .image }}
+            <img src="{{ .image | absURL }}" style="max-height: 300px; margin-bottom: 20px;"/>
+            {{ end }}
             <h6>{{ .tagline }}</h6>
             <h1>
               {{ .heading }}

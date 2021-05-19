@@ -19,7 +19,7 @@
         {{$menu := (.Site.Menus.nav)}} 
         {{$len := (len $menu)}} 
         {{ range $index, $element := $menu }} 
-          {{ if eq (add $index 1) $len }}
+          {{ if and (eq (add $index 1) $len) (ge $index 4) }}
           <li class="nav-item">
             <a
               class="nav-link btn btn-sm btn-primary btn-sm-rounded"
